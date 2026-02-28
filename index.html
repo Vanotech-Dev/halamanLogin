@@ -2,39 +2,71 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Login Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="login-container">
-      <h2>LOGIN</h2>
+  <body
+    class="bg-[url('./img/JamikGG.jpeg')] backdrop-blur-sm bg-[length:1000px] bg-no-repeat bg-center min-h-screen flex items-center justify-center"
+  >
+    <div class="bg-white w-full max-w-sm p-8 rounded-2xl shadow-xl">
+      <!-- Logo / Title -->
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-black">Login</h1>
+        <p class="text-gray-500 mt-2">Silakan masuk ke akun Anda</p>
+      </div>
 
-      <form>
-        <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Masukkan username" />
-        </div>
-
-        <div class="input-group">
-          <label for="password">Password</label>
+      <!-- Form -->
+      <form action="#" method="POST" class="space-y-6">
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">
+            Email
+          </label>
           <input
-            type="password"
-            id="password"
-            placeholder="Masukkan password"
+            type="email"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition"
+            placeholder="Masukkan email Anda"
           />
         </div>
 
-        <button type="submit" class="btn-login">Masuk</button>
+        <!-- Password -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">
+            Password
+          </label>
+          <input
+            type="password"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition"
+            placeholder="Masukkan password Anda"
+          />
+        </div>
+
+        <!-- Remember & Forgot -->
+        <div class="flex items-center justify-between text-sm">
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" class="accent-black" />
+            <span class="text-gray-600">Remember me</span>
+          </label>
+          <a href="#" class="text-black hover:underline"> Lupa password? </a>
+        </div>
+
+        <!-- Button -->
+        <button
+          type="submit"
+          class="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition duration-300"
+        >
+          Masuk
+        </button>
       </form>
 
-      <div class="footer-text">Belum punya akun? <a href="#">Daftar</a></div>
+      <!-- Register -->
+      <p class="text-center text-sm text-gray-500 mt-6">
+        Belum punya akun?
+        <a href="#" class="text-black font-medium hover:underline"> Daftar </a>
+      </p>
     </div>
   </body>
 </html>
